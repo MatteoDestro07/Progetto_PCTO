@@ -1,0 +1,11 @@
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\bin\Debug\Progetto PCTO.exe.config
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\bin\Debug\Progetto PCTO.exe
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\bin\Debug\Progetto PCTO.pdb
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.csproj.AssemblyReference.cache
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\obj\Debug\Progetto_PCTO.FrmVendite.resources
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\obj\Debug\Progetto_PCTO.Properties.Resources.resources
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\obj\Debug\Progetto_PCTO.Views.FrmClienti.resources
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.csproj.GenerateResource.cache
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.csproj.CoreCompileInputs.cache
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.exe
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto-PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.pdb

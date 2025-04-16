@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\utente\\Desktop\\Progetto PCTO\\",
+  "WorkspaceRootPath": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|c:\\users\\utente\\desktop\\progetto pcto\\progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|c:\\users\\utente\\desktop\\lavori scuola superiore\\4\u00B0superiore\\informatica\\laboratorio\\sql\\progetto-pcto\\progetto pcto\\views\\frmclienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\views\\frmclienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|c:\\users\\utente\\desktop\\lavori scuola superiore\\4\u00B0superiore\\informatica\\laboratorio\\sql\\progetto-pcto\\progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|c:\\users\\utente\\desktop\\lavori scuola superiore\\4\u00B0superiore\\informatica\\laboratorio\\sql\\progetto-pcto\\progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|c:\\users\\utente\\desktop\\lavori scuola superiore\\4\u00B0superiore\\informatica\\laboratorio\\sql\\progetto-pcto\\progetto pcto\\views\\frmclienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\views\\frmclienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,10 +31,48 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Progetto PCTO\\Progetto PCTO\\Form1.cs",
+              "Title": "FrmClienti.cs",
+              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Views\\FrmClienti.cs",
+              "RelativeDocumentMoniker": "Progetto PCTO\\Views\\FrmClienti.cs",
+              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Views\\FrmClienti.cs",
+              "RelativeToolTip": "Progetto PCTO\\Views\\FrmClienti.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwBsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:24:05.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmClienti.cs [Progettazione]",
+              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Views\\FrmClienti.cs",
+              "RelativeDocumentMoniker": "Progetto PCTO\\Views\\FrmClienti.cs",
+              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Views\\FrmClienti.cs [Progettazione]",
+              "RelativeToolTip": "Progetto PCTO\\Views\\FrmClienti.cs [Progettazione]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:22:06.257Z",
+              "EditorCaption": " [Progettazione]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Form1.cs",
               "RelativeDocumentMoniker": "Progetto PCTO\\Form1.cs",
-              "ToolTip": "C:\\Users\\utente\\Desktop\\Progetto PCTO\\Progetto PCTO\\Form1.cs [Progettazione]",
+              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Form1.cs",
+              "RelativeToolTip": "Progetto PCTO\\Form1.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wBwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:00:01.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Progettazione]",
+              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Form1.cs",
+              "RelativeDocumentMoniker": "Progetto PCTO\\Form1.cs",
+              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Form1.cs [Progettazione]",
               "RelativeToolTip": "Progetto PCTO\\Form1.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T08:54:01.103Z",

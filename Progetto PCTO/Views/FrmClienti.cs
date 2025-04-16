@@ -1,5 +1,4 @@
-﻿using Progetto_PCTO.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Progetto_PCTO
+namespace Progetto_PCTO.Views
 {
-    public partial class FrmVendite : Form
+    public partial class FrmClienti : Form
     {
-        public FrmVendite()
+        public FrmClienti()
         {
             InitializeComponent();
         }
@@ -25,8 +24,8 @@ namespace Progetto_PCTO
 
         private void clientiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmClienti frmClienti = new FrmClienti();
-            frmClienti.ShowDialog();
+            FrmVendite frmVendite = new FrmVendite();
+            frmVendite.ShowDialog();
         }
     }
 }
