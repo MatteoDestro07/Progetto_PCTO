@@ -18,6 +18,16 @@ namespace Progetto_PCTO
             InitializeComponent();
         }
 
+        private void FrmVendite_Load(object sender, EventArgs e)
+        {
+            cmbVisualizzazioneDgv.Items.Add("Clienti");
+            cmbVisualizzazioneDgv.Items.Add("Prodotti");
+            cmbVisualizzazioneDgv.Items.Add("Dettaglio Vendite");
+            cmbVisualizzazioneDgv.Items.Add("Testata Vendite");
+            cmbVisualizzazioneDgv.Items.Add("Carrello");
+            cmbVisualizzazioneDgv.Items.Add("Categorie");
+        }
+
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
@@ -27,6 +37,11 @@ namespace Progetto_PCTO
         {
             FrmClienti frmClienti = new FrmClienti();
             frmClienti.ShowDialog();
+        }
+
+        private void cmbVisualizzazioneDgv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,18 +37,18 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvVendite = new System.Windows.Forms.DataGridView();
             this.grbVendite = new System.Windows.Forms.GroupBox();
+            this.chkModalitàEliminaProdotto = new System.Windows.Forms.CheckBox();
+            this.btnSvuotaCarrello = new System.Windows.Forms.Button();
+            this.btnAggiungiProdotto = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nudQuantitàVendita = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbProdottoVendita = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbCategoriaVendita = new System.Windows.Forms.ComboBox();
-            this.nudQuantitàVendita = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnAggiungiProdotto = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbVisualizzazioneDgv = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnSvuotaCarrello = new System.Windows.Forms.Button();
-            this.chkModalitàEliminaProdotto = new System.Windows.Forms.CheckBox();
+            this.cmbVisualizzazioneDgv = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendite)).BeginInit();
             this.grbVendite.SuspendLayout();
@@ -131,6 +131,54 @@
             this.grbVendite.TabStop = false;
             this.grbVendite.Text = "Acquista Prodotto";
             // 
+            // chkModalitàEliminaProdotto
+            // 
+            this.chkModalitàEliminaProdotto.AutoSize = true;
+            this.chkModalitàEliminaProdotto.Location = new System.Drawing.Point(19, 131);
+            this.chkModalitàEliminaProdotto.Name = "chkModalitàEliminaProdotto";
+            this.chkModalitàEliminaProdotto.Size = new System.Drawing.Size(128, 20);
+            this.chkModalitàEliminaProdotto.TabIndex = 8;
+            this.chkModalitàEliminaProdotto.Text = "Modalità Elimina";
+            this.chkModalitàEliminaProdotto.UseVisualStyleBackColor = true;
+            // 
+            // btnSvuotaCarrello
+            // 
+            this.btnSvuotaCarrello.BackColor = System.Drawing.Color.Red;
+            this.btnSvuotaCarrello.Location = new System.Drawing.Point(68, 237);
+            this.btnSvuotaCarrello.Name = "btnSvuotaCarrello";
+            this.btnSvuotaCarrello.Size = new System.Drawing.Size(134, 44);
+            this.btnSvuotaCarrello.TabIndex = 7;
+            this.btnSvuotaCarrello.Text = "ELIMINA CARRELLO";
+            this.btnSvuotaCarrello.UseVisualStyleBackColor = false;
+            this.btnSvuotaCarrello.Visible = false;
+            // 
+            // btnAggiungiProdotto
+            // 
+            this.btnAggiungiProdotto.BackColor = System.Drawing.Color.Lime;
+            this.btnAggiungiProdotto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAggiungiProdotto.Location = new System.Drawing.Point(68, 168);
+            this.btnAggiungiProdotto.Name = "btnAggiungiProdotto";
+            this.btnAggiungiProdotto.Size = new System.Drawing.Size(134, 44);
+            this.btnAggiungiProdotto.TabIndex = 6;
+            this.btnAggiungiProdotto.Text = "AGGIUNGI";
+            this.btnAggiungiProdotto.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Quantità";
+            // 
+            // nudQuantitàVendita
+            // 
+            this.nudQuantitàVendita.Location = new System.Drawing.Point(113, 98);
+            this.nudQuantitàVendita.Name = "nudQuantitàVendita";
+            this.nudQuantitàVendita.Size = new System.Drawing.Size(141, 22);
+            this.nudQuantitàVendita.TabIndex = 4;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -167,33 +215,6 @@
             this.cmbCategoriaVendita.Size = new System.Drawing.Size(141, 24);
             this.cmbCategoriaVendita.TabIndex = 0;
             // 
-            // nudQuantitàVendita
-            // 
-            this.nudQuantitàVendita.Location = new System.Drawing.Point(113, 98);
-            this.nudQuantitàVendita.Name = "nudQuantitàVendita";
-            this.nudQuantitàVendita.Size = new System.Drawing.Size(141, 22);
-            this.nudQuantitàVendita.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Quantità";
-            // 
-            // btnAggiungiProdotto
-            // 
-            this.btnAggiungiProdotto.BackColor = System.Drawing.Color.Lime;
-            this.btnAggiungiProdotto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAggiungiProdotto.Location = new System.Drawing.Point(68, 168);
-            this.btnAggiungiProdotto.Name = "btnAggiungiProdotto";
-            this.btnAggiungiProdotto.Size = new System.Drawing.Size(134, 44);
-            this.btnAggiungiProdotto.TabIndex = 6;
-            this.btnAggiungiProdotto.Text = "AGGIUNGI";
-            this.btnAggiungiProdotto.UseVisualStyleBackColor = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
@@ -206,15 +227,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Visualizzazione";
             // 
-            // cmbVisualizzazioneDgv
-            // 
-            this.cmbVisualizzazioneDgv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVisualizzazioneDgv.FormattingEnabled = true;
-            this.cmbVisualizzazioneDgv.Location = new System.Drawing.Point(199, 25);
-            this.cmbVisualizzazioneDgv.Name = "cmbVisualizzazioneDgv";
-            this.cmbVisualizzazioneDgv.Size = new System.Drawing.Size(183, 24);
-            this.cmbVisualizzazioneDgv.TabIndex = 2;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -224,26 +236,15 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Seleziona cosa visualizzare";
             // 
-            // btnSvuotaCarrello
+            // cmbVisualizzazioneDgv
             // 
-            this.btnSvuotaCarrello.BackColor = System.Drawing.Color.Red;
-            this.btnSvuotaCarrello.Location = new System.Drawing.Point(68, 237);
-            this.btnSvuotaCarrello.Name = "btnSvuotaCarrello";
-            this.btnSvuotaCarrello.Size = new System.Drawing.Size(134, 44);
-            this.btnSvuotaCarrello.TabIndex = 7;
-            this.btnSvuotaCarrello.Text = "ELIMINA CARRELLO";
-            this.btnSvuotaCarrello.UseVisualStyleBackColor = false;
-            this.btnSvuotaCarrello.Visible = false;
-            // 
-            // chkModalitàEliminaProdotto
-            // 
-            this.chkModalitàEliminaProdotto.AutoSize = true;
-            this.chkModalitàEliminaProdotto.Location = new System.Drawing.Point(19, 131);
-            this.chkModalitàEliminaProdotto.Name = "chkModalitàEliminaProdotto";
-            this.chkModalitàEliminaProdotto.Size = new System.Drawing.Size(128, 20);
-            this.chkModalitàEliminaProdotto.TabIndex = 8;
-            this.chkModalitàEliminaProdotto.Text = "Modalità Elimina";
-            this.chkModalitàEliminaProdotto.UseVisualStyleBackColor = true;
+            this.cmbVisualizzazioneDgv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVisualizzazioneDgv.FormattingEnabled = true;
+            this.cmbVisualizzazioneDgv.Location = new System.Drawing.Point(199, 25);
+            this.cmbVisualizzazioneDgv.Name = "cmbVisualizzazioneDgv";
+            this.cmbVisualizzazioneDgv.Size = new System.Drawing.Size(183, 24);
+            this.cmbVisualizzazioneDgv.TabIndex = 2;
+            this.cmbVisualizzazioneDgv.SelectedIndexChanged += new System.EventHandler(this.cmbVisualizzazioneDgv_SelectedIndexChanged);
             // 
             // FrmVendite
             // 
@@ -260,6 +261,7 @@
             this.Name = "FrmVendite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestione vendite videogiochi";
+            this.Load += new System.EventHandler(this.FrmVendite_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendite)).EndInit();

@@ -38,9 +38,9 @@
             this.grbVisualizzaClienti = new System.Windows.Forms.GroupBox();
             this.dgvClienti = new System.Windows.Forms.DataGridView();
             this.grbAggiungiModificaEliminaClienti = new System.Windows.Forms.GroupBox();
-            this.rbAggiungiCliente = new System.Windows.Forms.RadioButton();
-            this.rbEliminaCliente = new System.Windows.Forms.RadioButton();
             this.rbModificaCliente = new System.Windows.Forms.RadioButton();
+            this.rbEliminaCliente = new System.Windows.Forms.RadioButton();
+            this.rbAggiungiCliente = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.grbVisualizzaClienti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClienti)).BeginInit();
@@ -58,7 +58,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(963, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1050, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,7 +99,7 @@
             this.grbVisualizzaClienti.Controls.Add(this.dgvClienti);
             this.grbVisualizzaClienti.Location = new System.Drawing.Point(13, 32);
             this.grbVisualizzaClienti.Name = "grbVisualizzaClienti";
-            this.grbVisualizzaClienti.Size = new System.Drawing.Size(629, 294);
+            this.grbVisualizzaClienti.Size = new System.Drawing.Size(717, 426);
             this.grbVisualizzaClienti.TabIndex = 2;
             this.grbVisualizzaClienti.TabStop = false;
             this.grbVisualizzaClienti.Text = "Visualizza Clienti";
@@ -111,7 +111,7 @@
             this.dgvClienti.Name = "dgvClienti";
             this.dgvClienti.RowHeadersWidth = 51;
             this.dgvClienti.RowTemplate.Height = 24;
-            this.dgvClienti.Size = new System.Drawing.Size(616, 256);
+            this.dgvClienti.Size = new System.Drawing.Size(710, 398);
             this.dgvClienti.TabIndex = 0;
             // 
             // grbAggiungiModificaEliminaClienti
@@ -119,39 +119,17 @@
             this.grbAggiungiModificaEliminaClienti.Controls.Add(this.rbModificaCliente);
             this.grbAggiungiModificaEliminaClienti.Controls.Add(this.rbEliminaCliente);
             this.grbAggiungiModificaEliminaClienti.Controls.Add(this.rbAggiungiCliente);
-            this.grbAggiungiModificaEliminaClienti.Location = new System.Drawing.Point(648, 34);
+            this.grbAggiungiModificaEliminaClienti.Location = new System.Drawing.Point(736, 34);
             this.grbAggiungiModificaEliminaClienti.Name = "grbAggiungiModificaEliminaClienti";
-            this.grbAggiungiModificaEliminaClienti.Size = new System.Drawing.Size(302, 292);
+            this.grbAggiungiModificaEliminaClienti.Size = new System.Drawing.Size(302, 418);
             this.grbAggiungiModificaEliminaClienti.TabIndex = 3;
             this.grbAggiungiModificaEliminaClienti.TabStop = false;
             this.grbAggiungiModificaEliminaClienti.Text = "Aggiungi Cliente";
             // 
-            // rbAggiungiCliente
-            // 
-            this.rbAggiungiCliente.AutoSize = true;
-            this.rbAggiungiCliente.Location = new System.Drawing.Point(6, 256);
-            this.rbAggiungiCliente.Name = "rbAggiungiCliente";
-            this.rbAggiungiCliente.Size = new System.Drawing.Size(81, 20);
-            this.rbAggiungiCliente.TabIndex = 0;
-            this.rbAggiungiCliente.TabStop = true;
-            this.rbAggiungiCliente.Text = "Aggiungi";
-            this.rbAggiungiCliente.UseVisualStyleBackColor = true;
-            // 
-            // rbEliminaCliente
-            // 
-            this.rbEliminaCliente.AutoSize = true;
-            this.rbEliminaCliente.Location = new System.Drawing.Point(224, 256);
-            this.rbEliminaCliente.Name = "rbEliminaCliente";
-            this.rbEliminaCliente.Size = new System.Drawing.Size(72, 20);
-            this.rbEliminaCliente.TabIndex = 1;
-            this.rbEliminaCliente.TabStop = true;
-            this.rbEliminaCliente.Text = "Elimina";
-            this.rbEliminaCliente.UseVisualStyleBackColor = true;
-            // 
             // rbModificaCliente
             // 
             this.rbModificaCliente.AutoSize = true;
-            this.rbModificaCliente.Location = new System.Drawing.Point(115, 256);
+            this.rbModificaCliente.Location = new System.Drawing.Point(115, 392);
             this.rbModificaCliente.Name = "rbModificaCliente";
             this.rbModificaCliente.Size = new System.Drawing.Size(79, 20);
             this.rbModificaCliente.TabIndex = 2;
@@ -159,17 +137,40 @@
             this.rbModificaCliente.Text = "Modifica";
             this.rbModificaCliente.UseVisualStyleBackColor = true;
             // 
+            // rbEliminaCliente
+            // 
+            this.rbEliminaCliente.AutoSize = true;
+            this.rbEliminaCliente.Location = new System.Drawing.Point(224, 392);
+            this.rbEliminaCliente.Name = "rbEliminaCliente";
+            this.rbEliminaCliente.Size = new System.Drawing.Size(72, 20);
+            this.rbEliminaCliente.TabIndex = 1;
+            this.rbEliminaCliente.TabStop = true;
+            this.rbEliminaCliente.Text = "Elimina";
+            this.rbEliminaCliente.UseVisualStyleBackColor = true;
+            // 
+            // rbAggiungiCliente
+            // 
+            this.rbAggiungiCliente.AutoSize = true;
+            this.rbAggiungiCliente.Location = new System.Drawing.Point(6, 392);
+            this.rbAggiungiCliente.Name = "rbAggiungiCliente";
+            this.rbAggiungiCliente.Size = new System.Drawing.Size(81, 20);
+            this.rbAggiungiCliente.TabIndex = 0;
+            this.rbAggiungiCliente.TabStop = true;
+            this.rbAggiungiCliente.Text = "Aggiungi";
+            this.rbAggiungiCliente.UseVisualStyleBackColor = true;
+            // 
             // FrmClienti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 334);
+            this.ClientSize = new System.Drawing.Size(1050, 470);
             this.Controls.Add(this.grbAggiungiModificaEliminaClienti);
             this.Controls.Add(this.grbVisualizzaClienti);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmClienti";
             this.Text = "Gestione Clienti";
+            this.Load += new System.EventHandler(this.FrmClienti_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.grbVisualizzaClienti.ResumeLayout(false);
