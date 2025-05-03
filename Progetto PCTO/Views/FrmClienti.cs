@@ -55,11 +55,11 @@ namespace Progetto_PCTO.Views
 
         private void visElencoClienti()
         {
-            clientiController listaAziende = new clientiController();
+            clientiController listaClienti = new clientiController();
 
             dgvClienti.DataSource = null;
 
-            caricaClienti(listaAziende.elencoClienti());
+            caricaClienti(listaClienti.elencoClienti());
 
         }
 

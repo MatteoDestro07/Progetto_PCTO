@@ -38,6 +38,13 @@
             this.grbVisualizzaClienti = new System.Windows.Forms.GroupBox();
             this.dgvClienti = new System.Windows.Forms.DataGridView();
             this.grbAggiungiModificaEliminaClienti = new System.Windows.Forms.GroupBox();
+            this.txtCognome = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.btnAggiungiModificaElimina = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.grbModificaCliente = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbModificaId = new System.Windows.Forms.ComboBox();
@@ -48,13 +55,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCognome = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.btnAggiungiModificaElimina = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.rbModificaCliente = new System.Windows.Forms.RadioButton();
             this.rbEliminaCliente = new System.Windows.Forms.RadioButton();
             this.rbAggiungiCliente = new System.Windows.Forms.RadioButton();
@@ -155,6 +155,66 @@
             this.grbAggiungiModificaEliminaClienti.TabStop = false;
             this.grbAggiungiModificaEliminaClienti.Text = "Aggiungi Cliente";
             // 
+            // txtCognome
+            // 
+            this.txtCognome.Location = new System.Drawing.Point(102, 60);
+            this.txtCognome.Name = "txtCognome";
+            this.txtCognome.Size = new System.Drawing.Size(140, 22);
+            this.txtCognome.TabIndex = 6;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(102, 90);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(140, 22);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(102, 30);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(140, 22);
+            this.txtNome.TabIndex = 4;
+            // 
+            // btnAggiungiModificaElimina
+            // 
+            this.btnAggiungiModificaElimina.BackColor = System.Drawing.Color.Lime;
+            this.btnAggiungiModificaElimina.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAggiungiModificaElimina.Location = new System.Drawing.Point(78, 136);
+            this.btnAggiungiModificaElimina.Name = "btnAggiungiModificaElimina";
+            this.btnAggiungiModificaElimina.Size = new System.Drawing.Size(129, 45);
+            this.btnAggiungiModificaElimina.TabIndex = 3;
+            this.btnAggiungiModificaElimina.Text = "Aggiungi";
+            this.btnAggiungiModificaElimina.UseVisualStyleBackColor = false;
+            this.btnAggiungiModificaElimina.Click += new System.EventHandler(this.btnAggiungiModificaElimina_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "E-Mail";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Cognome";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome";
+            // 
             // grbModificaCliente
             // 
             this.grbModificaCliente.Controls.Add(this.label7);
@@ -252,66 +312,6 @@
             this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "Nome";
-            // 
-            // txtCognome
-            // 
-            this.txtCognome.Location = new System.Drawing.Point(102, 60);
-            this.txtCognome.Name = "txtCognome";
-            this.txtCognome.Size = new System.Drawing.Size(140, 22);
-            this.txtCognome.TabIndex = 6;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(102, 90);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(140, 22);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(102, 30);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(140, 22);
-            this.txtNome.TabIndex = 4;
-            // 
-            // btnAggiungiModificaElimina
-            // 
-            this.btnAggiungiModificaElimina.BackColor = System.Drawing.Color.Lime;
-            this.btnAggiungiModificaElimina.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAggiungiModificaElimina.Location = new System.Drawing.Point(78, 136);
-            this.btnAggiungiModificaElimina.Name = "btnAggiungiModificaElimina";
-            this.btnAggiungiModificaElimina.Size = new System.Drawing.Size(129, 45);
-            this.btnAggiungiModificaElimina.TabIndex = 3;
-            this.btnAggiungiModificaElimina.Text = "Aggiungi";
-            this.btnAggiungiModificaElimina.UseVisualStyleBackColor = false;
-            this.btnAggiungiModificaElimina.Click += new System.EventHandler(this.btnAggiungiModificaElimina_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "E-Mail";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cognome";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome";
             // 
             // rbModificaCliente
             // 
@@ -416,8 +416,10 @@
             this.Controls.Add(this.grbVisualizzaClienti);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1068, 517);
+            this.MinimumSize = new System.Drawing.Size(1068, 517);
             this.Name = "FrmClienti";
-            this.Text = "Gestione Clienti";
+            this.Text = "Gestione clienti";
             this.Load += new System.EventHandler(this.FrmClienti_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

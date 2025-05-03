@@ -39,9 +39,16 @@ namespace Progetto_PCTO
             frmClienti.ShowDialog();
         }
 
+        private void categorieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorie frmCategorie = new FrmCategorie();
+            frmCategorie.ShowDialog();
+        }
+
         private void cmbVisualizzazioneDgv_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
     }
 }
