@@ -34,7 +34,9 @@
             this.cmbEliminaCliente = new System.Windows.Forms.ComboBox();
             this.btnElimina = new System.Windows.Forms.Button();
             this.grbModificaCategoria = new System.Windows.Forms.GroupBox();
+            this.txtModifica = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmbModificaId = new System.Windows.Forms.ComboBox();
             this.btnModificaCliente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,8 +55,6 @@
             this.prodottiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.esciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtModifica = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.grbElimina.SuspendLayout();
             this.grbModificaCategoria.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -69,7 +69,7 @@
             this.grbElimina.Controls.Add(this.label8);
             this.grbElimina.Controls.Add(this.cmbEliminaCliente);
             this.grbElimina.Controls.Add(this.btnElimina);
-            this.grbElimina.Location = new System.Drawing.Point(738, 205);
+            this.grbElimina.Location = new System.Drawing.Point(738, 199);
             this.grbElimina.Name = "grbElimina";
             this.grbElimina.Size = new System.Drawing.Size(302, 115);
             this.grbElimina.TabIndex = 15;
@@ -105,6 +105,7 @@
             this.btnElimina.TabIndex = 3;
             this.btnElimina.Text = "Elimina";
             this.btnElimina.UseVisualStyleBackColor = false;
+            this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
             // 
             // grbModificaCategoria
             // 
@@ -113,13 +114,20 @@
             this.grbModificaCategoria.Controls.Add(this.label2);
             this.grbModificaCategoria.Controls.Add(this.cmbModificaId);
             this.grbModificaCategoria.Controls.Add(this.btnModificaCliente);
-            this.grbModificaCategoria.Location = new System.Drawing.Point(390, 173);
+            this.grbModificaCategoria.Location = new System.Drawing.Point(738, 158);
             this.grbModificaCategoria.Name = "grbModificaCategoria";
             this.grbModificaCategoria.Size = new System.Drawing.Size(302, 162);
             this.grbModificaCategoria.TabIndex = 14;
             this.grbModificaCategoria.TabStop = false;
             this.grbModificaCategoria.Text = "Modifica Cliente";
             this.grbModificaCategoria.Visible = false;
+            // 
+            // txtModifica
+            // 
+            this.txtModifica.Location = new System.Drawing.Point(108, 65);
+            this.txtModifica.Name = "txtModifica";
+            this.txtModifica.Size = new System.Drawing.Size(140, 22);
+            this.txtModifica.TabIndex = 6;
             // 
             // label7
             // 
@@ -129,6 +137,15 @@
             this.label7.Size = new System.Drawing.Size(18, 16);
             this.label7.TabIndex = 8;
             this.label7.Text = "Id";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Descrizione";
             // 
             // cmbModificaId
             // 
@@ -205,7 +222,7 @@
             this.grbAggiungiCategoria.Controls.Add(this.txtDescrizioneCategoria);
             this.grbAggiungiCategoria.Controls.Add(this.btnAggiungiCategoria);
             this.grbAggiungiCategoria.Controls.Add(this.label1);
-            this.grbAggiungiCategoria.Location = new System.Drawing.Point(738, 54);
+            this.grbAggiungiCategoria.Location = new System.Drawing.Point(738, 189);
             this.grbAggiungiCategoria.Name = "grbAggiungiCategoria";
             this.grbAggiungiCategoria.Size = new System.Drawing.Size(302, 131);
             this.grbAggiungiCategoria.TabIndex = 12;
@@ -242,7 +259,6 @@
             // 
             // grbVisualizza
             // 
-            this.grbVisualizza.Controls.Add(this.grbModificaCategoria);
             this.grbVisualizza.Controls.Add(this.dgv);
             this.grbVisualizza.Location = new System.Drawing.Point(12, 32);
             this.grbVisualizza.Name = "grbVisualizza";
@@ -281,6 +297,7 @@
             this.clientiToolStripMenuItem.Name = "clientiToolStripMenuItem";
             this.clientiToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.clientiToolStripMenuItem.Text = "Clienti";
+            this.clientiToolStripMenuItem.Click += new System.EventHandler(this.clientiToolStripMenuItem_Click);
             // 
             // categorieToolStripMenuItem
             // 
@@ -307,29 +324,14 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(30, 24);
             this.toolStripMenuItem1.Text = "?";
             // 
-            // txtModifica
-            // 
-            this.txtModifica.Location = new System.Drawing.Point(108, 65);
-            this.txtModifica.Name = "txtModifica";
-            this.txtModifica.Size = new System.Drawing.Size(140, 22);
-            this.txtModifica.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Descrizione";
-            // 
             // FrmCategorie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 470);
-            this.Controls.Add(this.grbAggiungiCategoria);
             this.Controls.Add(this.grbElimina);
+            this.Controls.Add(this.grbAggiungiCategoria);
+            this.Controls.Add(this.grbModificaCategoria);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbVisualizza);
             this.Controls.Add(this.menuStrip1);

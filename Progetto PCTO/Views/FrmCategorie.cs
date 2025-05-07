@@ -19,6 +19,18 @@ namespace Progetto_PCTO.Views
             InitializeComponent();
         }
 
+        private void clientiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClienti frmClienti = new FrmClienti();
+            frmClienti.ShowDialog();
+        }
+
+        private void categorieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVendite frmVendite = new FrmVendite();
+            frmVendite.ShowDialog();
+        }
+
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
@@ -27,6 +39,10 @@ namespace Progetto_PCTO.Views
         private void FrmCategorie_Load(object sender, EventArgs e)
         {
             visElencoCategorie();
+            rbAggiungi.Checked = true;
+            controllaChk();
+            caricaCmb(cmbModificaId);
+            caricaCmb(cmbEliminaCliente);
         }
 
         private void visElencoCategorie()
@@ -59,6 +75,8 @@ namespace Progetto_PCTO.Views
                 categoria.aggiungi();
                 txtDescrizioneCategoria.Clear();
                 visElencoCategorie();
+                caricaCmb(cmbModificaId);
+                caricaCmb(cmbEliminaCliente);
             }
             else
             {
@@ -105,8 +123,22 @@ namespace Progetto_PCTO.Views
 
         private void btnModificaCliente_Click(object sender, EventArgs e)
         {
+            if(!string.IsNullOrEmpty(txtModifica.Text))
+            {
+                categorieController categorie = new categorieController();
+                categorie.categorie.IdCategoria = Convert.ToInt32(cmbModificaId.SelectedItem);
+                categorie.categorie.DescCategoria = txtModifica.Text;
+                categorie.modifica();
+                txtModifica.Clear();
+                visElencoCategorie();
+                caricaCmb(cmbModificaId);
+                caricaCmb(cmbEliminaCliente);
+            }
+            else
+            {
+                MessageBox.Show("Inserire la descrizione della categoria", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-            
         }
 
         private void cmbModificaId_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,7 +149,29 @@ namespace Progetto_PCTO.Views
 
             if (categoriaSelezionata != null)
             {
-                txtDescrizioneCategoria.Text = categoriaSelezionata.DescCategoria;
+                txtModifica.Text = categoriaSelezionata.DescCategoria;
+            }
+        }
+
+        private void btnElimina_Click(object sender, EventArgs e)
+        {
+            categorieController categorie = new categorieController();
+            categorie.categorie.IdCategoria = Convert.ToInt32(cmbEliminaCliente.SelectedItem);
+            categorie.elimina();
+            visElencoCategorie();
+            caricaCmb(cmbModificaId);
+            caricaCmb(cmbEliminaCliente);
+        }
+
+        private void caricaCmb(ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            categorieController categorieController = new categorieController();
+            List<categorieModel> listaCategorie = categorieController.elencoCategorie();
+            foreach (var categorie in listaCategorie)
+            {
+                if (categorie.Validita == ' ')
+                    cmb.Items.Add(categorie.IdCategoria);
             }
         }
     }

@@ -90,6 +90,7 @@
             this.prodottiToolStripMenuItem.Name = "prodottiToolStripMenuItem";
             this.prodottiToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.prodottiToolStripMenuItem.Text = "Prodotti";
+            this.prodottiToolStripMenuItem.Click += new System.EventHandler(this.prodottiToolStripMenuItem_Click);
             // 
             // esciToolStripMenuItem
             // 

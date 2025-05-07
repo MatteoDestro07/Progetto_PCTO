@@ -99,6 +99,7 @@
             this.categorieToolStripMenuItem.Name = "categorieToolStripMenuItem";
             this.categorieToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.categorieToolStripMenuItem.Text = "Categorie";
+            this.categorieToolStripMenuItem.Click += new System.EventHandler(this.categorieToolStripMenuItem_Click);
             // 
             // prodottiToolStripMenuItem
             // 

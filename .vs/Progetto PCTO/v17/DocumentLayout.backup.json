@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\",
+  "WorkspaceRootPath": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto_PCTO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|c:\\users\\utente\\desktop\\lavori scuola superiore\\4\u00B0superiore\\informatica\\laboratorio\\sql\\progetto-pcto\\progetto pcto\\views\\frmcategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\views\\frmcategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\progetto pcto\\controllers\\categoriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\controllers\\categoriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\progetto pcto\\controllers\\clienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\controllers\\clienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\progetto pcto\\views\\frmcategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\views\\frmcategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto_PCTO\\progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|c:\\users\\utente\\desktop\\lavori scuola superiore\\4\u00B0superiore\\informatica\\laboratorio\\sql\\progetto_pcto\\progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03BB098A-8093-4A62-B89B-0F44DEC6BC9F}|Progetto PCTO\\Progetto PCTO.csproj|solutionrelative:progetto pcto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto_PCTO\\Progetto PCTO\\Form1.cs",
               "RelativeDocumentMoniker": "Progetto PCTO\\Form1.cs",
-              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Form1.cs [Progettazione]",
+              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto_PCTO\\Progetto PCTO\\Form1.cs [Progettazione]",
               "RelativeToolTip": "Progetto PCTO\\Form1.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T08:54:01.103Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmCategorie.cs [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Views\\FrmCategorie.cs",
-              "RelativeDocumentMoniker": "Progetto PCTO\\Views\\FrmCategorie.cs",
-              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Views\\FrmCategorie.cs [Progettazione]",
-              "RelativeToolTip": "Progetto PCTO\\Views\\FrmCategorie.cs [Progettazione]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T14:54:16.813Z",
               "IsPinned": true,
               "EditorCaption": " [Progettazione]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clientiController.cs",
-              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Controllers\\clientiController.cs",
-              "RelativeDocumentMoniker": "Progetto PCTO\\Controllers\\clientiController.cs",
-              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Controllers\\clientiController.cs",
-              "RelativeToolTip": "Progetto PCTO\\Controllers\\clientiController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAowC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T15:44:57.361Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "categorieController.cs",
-              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Controllers\\categorieController.cs",
-              "RelativeDocumentMoniker": "Progetto PCTO\\Controllers\\categorieController.cs",
-              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Controllers\\categorieController.cs",
-              "RelativeToolTip": "Progetto PCTO\\Controllers\\categorieController.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAcwCwAAAAAAAAAAAAAAA==",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto_PCTO\\Progetto PCTO\\Form1.cs",
+              "RelativeDocumentMoniker": "Progetto PCTO\\Form1.cs",
+              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto_PCTO\\Progetto PCTO\\Form1.cs",
+              "RelativeToolTip": "Progetto PCTO\\Form1.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T15:34:56.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmCategorie.cs",
-              "DocumentMoniker": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Views\\FrmCategorie.cs",
-              "RelativeDocumentMoniker": "Progetto PCTO\\Views\\FrmCategorie.cs",
-              "ToolTip": "C:\\Users\\utente\\Desktop\\Lavori scuola superiore\\4\u00B0Superiore\\Informatica\\Laboratorio\\SQL\\Progetto-PCTO\\Progetto PCTO\\Views\\FrmCategorie.cs",
-              "RelativeToolTip": "Progetto PCTO\\Views\\FrmCategorie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T15:02:33.533Z",
+              "WhenOpened": "2025-05-07T07:36:14.016Z",
               "EditorCaption": ""
             }
           ]

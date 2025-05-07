@@ -22,6 +22,24 @@ namespace Progetto_PCTO.Views
             InitializeComponent();
         }
 
+        private void clientiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVendite frmVendite = new FrmVendite();
+            frmVendite.ShowDialog();
+        }
+
+        private void categorieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorie frmCategorie = new FrmCategorie();
+            frmCategorie.ShowDialog();
+        }
+
+        private void esciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
         private void FrmClienti_Load(object sender, EventArgs e)
         {
             visElencoClienti();
@@ -40,17 +58,6 @@ namespace Progetto_PCTO.Views
                 if(cliente.Validita == ' ')
                     cmb.Items.Add(cliente.IdCliente);
             }
-        }
-
-        private void esciToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void clientiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmVendite frmVendite = new FrmVendite();
-            frmVendite.ShowDialog();
         }
 
         private void visElencoClienti()
