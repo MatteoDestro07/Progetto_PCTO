@@ -33,3 +33,4 @@ C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laborat
 C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.csproj.CoreCompileInputs.cache
 C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.exe
 C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.pdb
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto_PCTO.Views.FrmProdotti.resources

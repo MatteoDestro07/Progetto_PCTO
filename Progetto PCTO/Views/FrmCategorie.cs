@@ -174,5 +174,16 @@ namespace Progetto_PCTO.Views
                     cmb.Items.Add(categorie.IdCategoria);
             }
         }
+
+        private void categorieToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void prodottiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProdotti frmProdotti = new FrmProdotti();
+            frmProdotti.ShowDialog();
+        }
     }
 }

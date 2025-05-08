@@ -67,7 +67,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(879, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(872, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -252,14 +252,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 365);
+            this.ClientSize = new System.Drawing.Size(872, 363);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbVendite);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(897, 412);
-            this.MinimumSize = new System.Drawing.Size(897, 412);
+            this.MaximumSize = new System.Drawing.Size(890, 410);
+            this.MinimumSize = new System.Drawing.Size(890, 410);
             this.Name = "FrmVendite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestione vendite videogiochi";

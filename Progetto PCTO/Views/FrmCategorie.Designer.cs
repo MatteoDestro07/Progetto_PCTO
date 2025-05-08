@@ -119,7 +119,7 @@
             this.grbModificaCategoria.Size = new System.Drawing.Size(302, 162);
             this.grbModificaCategoria.TabIndex = 14;
             this.grbModificaCategoria.TabStop = false;
-            this.grbModificaCategoria.Text = "Modifica Cliente";
+            this.grbModificaCategoria.Text = "Modifica Categoria";
             this.grbModificaCategoria.Visible = false;
             // 
             // txtModifica
@@ -304,12 +304,14 @@
             this.categorieToolStripMenuItem.Name = "categorieToolStripMenuItem";
             this.categorieToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.categorieToolStripMenuItem.Text = "Vendite";
+            this.categorieToolStripMenuItem.Click += new System.EventHandler(this.categorieToolStripMenuItem_Click_1);
             // 
             // prodottiToolStripMenuItem
             // 
             this.prodottiToolStripMenuItem.Name = "prodottiToolStripMenuItem";
             this.prodottiToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.prodottiToolStripMenuItem.Text = "Prodotti";
+            this.prodottiToolStripMenuItem.Click += new System.EventHandler(this.prodottiToolStripMenuItem_Click);
             // 
             // esciToolStripMenuItem
             // 
