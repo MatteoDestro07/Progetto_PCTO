@@ -7,6 +7,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -49,10 +51,64 @@ namespace Progetto_PCTO
             cmbVisualizzazioneDgv.Items.Add("Prodotti");
             cmbVisualizzazioneDgv.Items.Add("Dettaglio Vendite");
             cmbVisualizzazioneDgv.Items.Add("Testata Vendite");
-            cmbVisualizzazioneDgv.Items.Add("Carrello");
             cmbVisualizzazioneDgv.Items.Add("Categorie");
 
             caricaCmbCategoria(cmbCategoriaVendita);
+            caricaCmbEliminaProdotto(cmbEliminaProdotto);
+            caricaCmbEliminaProdotto(cmbNomeProdottoModifica);
+
+            visCarrello(dgvCarrello);
+        }
+
+        private void caricaCmbEliminaProdotto(ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            carrelloController carrello = new carrelloController();
+            List<carrelloModel> listaCarrello = carrello.elencoCarrello();
+
+            foreach (var carrelloItem in listaCarrello)
+            {
+                fromCarrelloConvertiIdInString(carrello, "cmb", cmb);
+            }
+        }
+
+        private void visCarrello(DataGridView dgv)
+        {
+            dgv.DataSource = null;
+            carrelloController carrello = new carrelloController();
+            fromCarrelloConvertiIdInString(carrello, "dgv", null);
+        }
+
+        private void fromCarrelloConvertiIdInString(carrelloController carrello, string azione, ComboBox cmb)
+        {
+            prodottiController prodottiController = new prodottiController();
+            categorieController categorieController = new categorieController();
+
+            List<prodottiModel> listaProdotti = prodottiController.elencoProdotti();
+            List<categorieModel> listaCategorie = categorieController.elencoCategorie();
+
+            var carrelloData = carrello.elencoCarrello().Select(item => new
+            {
+                NomeProdotto = listaProdotti.FirstOrDefault(p => p.IdProdotto == item.IdProdotto)?.DescProdotto,
+                NomeCategoria = listaCategorie.FirstOrDefault(c => c.IdCategoria == item.IdCategoria)?.DescCategoria,
+                Prezzo = item.Prezzo,
+                Quantita = item.Quantita,
+            }).ToList();
+
+            if (azione == "cmb")
+            {
+                cmb.Items.Clear();
+                foreach (var carrelloItem in carrelloData)
+                {
+                    cmb.Items.Add(carrelloItem.NomeProdotto);
+                }
+            }
+            else if (azione == "dgv")
+            {
+                dgvCarrello.DataSource = carrelloData;
+                dgvCarrello.ReadOnly = true;
+                dgvCarrello.ClearSelection();
+            }
         }
 
         private void cmbVisualizzazioneDgv_SelectedIndexChanged(object sender, EventArgs e)
@@ -176,13 +232,26 @@ namespace Progetto_PCTO
 
         private void btnAggiungiProdotto_Click(object sender, EventArgs e)
         {
-            if(cmbCategoriaVendita.SelectedIndex != -1)
+            if (cmbCategoriaVendita.SelectedIndex != -1)
             {
-                if(cmbProdottoVendita.SelectedIndex != -1)
+                if (cmbProdottoVendita.SelectedIndex != -1)
                 {
-                    if(nudQuantitàVendita.Value != 0)
+                    if (nudQuantitàVendita.Value != 0)
                     {
-                        
+                        carrelloController carrello = new carrelloController();
+                        carrello.carrello.IdProdotto = convertiProdottoInId(cmbProdottoVendita.Text);
+                        carrello.carrello.IdCategoria = covertiCategInId();
+                        carrello.carrello.Prezzo = nudQuantitàVendita.Value * getPrezzoById(cmbProdottoVendita.Text);
+                        carrello.carrello.Quantita = Convert.ToInt32(nudQuantitàVendita.Value);
+                        carrello.aggiungi();
+
+                        visCarrello(dgvCarrello);
+                        caricaCmbEliminaProdotto(cmbEliminaProdotto);
+                        caricaCmbEliminaProdotto(cmbNomeProdottoModifica);
+
+                        cmbProdottoVendita.SelectedIndex = -1;
+                        nudQuantitàVendita.Value = 0;
+                        cmbCategoriaVendita.SelectedIndex = -1;
                     }
                     else
                         MessageBox.Show("Inserire una quantità valida", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -192,6 +261,140 @@ namespace Progetto_PCTO
             }
             else
                 MessageBox.Show("Selezionare una categoria", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private decimal getPrezzoById(string text)
+        {
+            decimal prezzo = 0;
+
+            prodottiController prodottiController = new prodottiController();
+            List<prodottiModel> listaProdotti = prodottiController.elencoProdotti();
+
+            foreach (var prod in listaProdotti)
+            {
+                if (prod.DescProdotto == text)
+                {
+                    prezzo = Convert.ToDecimal(prod.Prezzo);
+                    break;
+                }
+            }
+
+            return prezzo;
+        }
+
+        private int convertiProdottoInId(string prodotto)
+        {
+            int id = 0;
+            prodottiController prodottiController = new prodottiController();
+            List<prodottiModel> listaProdotti = prodottiController.elencoProdotti();
+
+            foreach (var prod in listaProdotti)
+            {
+                if (prod.DescProdotto == prodotto)
+                {
+                    id = prod.IdProdotto;
+                    break;
+                }
+            }
+
+            return id;
+        }
+
+        private void nudQuantitàVendita_ValueChanged(object sender, EventArgs e)
+        {
+            lblPrezzo.Text = (getPrezzoById(cmbProdottoVendita.Text) * nudQuantitàVendita.Value).ToString("C2");
+        }
+
+        private void btnSvuotaCarrello_Click(object sender, EventArgs e)
+        {
+            if (dgvCarrello.Rows.Count == 0)
+            {
+                MessageBox.Show("Il carrello è vuoto", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                carrelloController carrello = new carrelloController();
+                carrello.svuotaCarrello();
+                visCarrello(dgvCarrello);
+                dgvCarrello.DataSource = null;
+                
+                caricaCmbEliminaProdotto(cmbEliminaProdotto);
+                caricaCmbEliminaProdotto(cmbNomeProdottoModifica);
+            }
+        }
+
+        private void btnEliminaProdotto_Click(object sender, EventArgs e)
+        {
+            carrelloController carrello = new carrelloController();
+            carrello.carrello.IdProdotto = convertiProdottoInId(cmbEliminaProdotto.Text);
+            carrello.elimina();
+
+            visCarrello(dgvCarrello);
+            caricaCmbEliminaProdotto(cmbEliminaProdotto);
+            caricaCmbEliminaProdotto(cmbNomeProdottoModifica);
+        }
+
+        private void btnModifica_Click(object sender, EventArgs e)
+        {
+            if(cmbNomeProdottoModifica.SelectedIndex != -1)
+            {
+                if(nudQuantitaProdotto.Value != 0)
+                {
+                    carrelloController carrello = new carrelloController();
+                    carrello.carrello.IdProdotto = convertiProdottoInId(cmbNomeProdottoModifica.Text);
+                    carrello.carrello.Quantita = Convert.ToInt32(nudQuantitaProdotto.Value);
+                    carrello.carrello.Prezzo = getPrezzoById(cmbNomeProdottoModifica.Text) * Convert.ToDecimal(nudQuantitaProdotto.Value);
+                    carrello.modifica();
+
+                    visCarrello(dgvCarrello);
+
+                    nudQuantitaProdotto.Value = 0;
+                    cmbNomeProdottoModifica.SelectedIndex = -1;
+                }
+                else
+                    MessageBox.Show("Inserire una quantità valida", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+                MessageBox.Show("Selezionare un prodotto", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void cmbNomeProdottoModifica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string categ = fromNomeGetCateg(cmbNomeProdottoModifica.Text);
+            lblCategoriaProdotto.Text = categ;
+        }
+
+        private string fromNomeGetCateg(string prodotto)
+        {
+            prodottiController prodottiController = new prodottiController();
+            List<prodottiModel> listaProdotti = prodottiController.elencoProdotti();
+
+            foreach (var prod in listaProdotti)
+            {
+                if (prod.DescProdotto == prodotto)
+                {
+                    return getNomeCategoriaById(prod.IdCategoria);
+                }
+            }
+
+            return string.Empty;
+        }
+
+        private string getNomeCategoriaById(int idCategoria)
+        {
+            categorieController categorieController = new categorieController();
+            List<categorieModel> listaCategorie = categorieController.elencoCategorie();
+
+            foreach (var categoria in listaCategorie)
+            {
+                if (categoria.IdCategoria == idCategoria)
+                {
+                    return categoria.DescCategoria;
+                }
+            }
+
+            return string.Empty; // Restituisce una stringa vuota se la categoria non viene trovata  
         }
     }
 }

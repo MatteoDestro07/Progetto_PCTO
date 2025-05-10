@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adoNetSQL.cs" />
+    <Compile Include="Controllers\carrelloController.cs" />
     <Compile Include="Controllers\categorieController.cs" />
     <Compile Include="Controllers\clientiController.cs" />
     <Compile Include="Controllers\prodottiController.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\carrelloModel.cs" />
     <Compile Include="Models\categorieModel.cs" />
     <Compile Include="Models\clientiModel.cs" />
     <Compile Include="Models\dettaglioVenditeModel.cs" />
@@ -116,7 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DB\" />
-    <Folder Include="Fatture\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
