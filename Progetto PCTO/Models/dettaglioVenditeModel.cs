@@ -8,16 +8,14 @@ namespace Progetto_PCTO.Models
 {
     class dettaglioVenditeModel
     {
-        private int idVendita;
+        private int idDettaglioVendita;
+        private int numeroFattura;
         private int idProdotto;
-        private string descrizioneProdotto;
-        private int quantita;
-        private decimal prezzoUnitario;
+        private int quantitaVenduta;
 
-        public int IdVendita { get => idVendita; set => idVendita = value; }
+        public int IdDettaglioVendita { get => idDettaglioVendita; set => idDettaglioVendita = value; }
+        public int NumeroFattura { get => numeroFattura; set => numeroFattura = value; }
         public int IdProdotto { get => idProdotto; set => idProdotto = value; }
-        public string DescrizioneProdotto { get => descrizioneProdotto; set => descrizioneProdotto = value; }
-        public int Quantita { get => quantita; set => quantita = value; }
-        public decimal PrezzoUnitario { get => prezzoUnitario; set => prezzoUnitario = value; }
+        public int QuantitaVenduta { get => quantitaVenduta; set => quantitaVenduta = value; }
     }
 }
