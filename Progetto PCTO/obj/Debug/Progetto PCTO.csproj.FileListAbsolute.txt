@@ -34,3 +34,9 @@ C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laborat
 C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.exe
 C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto PCTO.pdb
 C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto_PCTO.Views.FrmProdotti.resources
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto_PCTO.Views.FrmConfermaAcquisto.resources
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+C:\Users\utente\Desktop\Lavori scuola superiore\4°Superiore\Informatica\Laboratorio\SQL\Progetto_PCTO\Progetto PCTO\obj\Debug\Progetto.300D6A60.Up2Date

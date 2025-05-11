@@ -433,6 +433,7 @@
             this.btnConfermaAcquisto.TabIndex = 9;
             this.btnConfermaAcquisto.Text = "CONFERMA ACQUISTO";
             this.btnConfermaAcquisto.UseVisualStyleBackColor = false;
+            this.btnConfermaAcquisto.Click += new System.EventHandler(this.btnConfermaAcquisto_Click);
             // 
             // FrmVendite
             // 

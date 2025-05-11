@@ -315,7 +315,7 @@ namespace Progetto_PCTO
             else
             {
                 carrelloController carrello = new carrelloController();
-                carrello.svuotaCarrello();
+                carrello.svuotaCarrello("");
                 visCarrello(dgvCarrello);
                 dgvCarrello.DataSource = null;
                 
@@ -394,7 +394,25 @@ namespace Progetto_PCTO
                 }
             }
 
-            return string.Empty; // Restituisce una stringa vuota se la categoria non viene trovata  
+            return string.Empty;
+        }
+
+        private void btnConfermaAcquisto_Click(object sender, EventArgs e)
+        {
+            carrelloController carrelloController = new carrelloController();
+            List<carrelloModel> listaCarrello = carrelloController.elencoCarrello();
+
+            if (listaCarrello.Count == 0)
+            {
+                MessageBox.Show("Il carrello è vuoto", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                FrmConfermaAcquisto frmConfermaAcquisto = new FrmConfermaAcquisto();
+                frmConfermaAcquisto.ShowDialog();
+                visCarrello(dgvCarrello);
+            }
         }
     }
 }

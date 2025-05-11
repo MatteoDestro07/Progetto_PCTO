@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Policy;
 
 namespace Progetto_PCTO.Controllers
 {
@@ -109,11 +110,12 @@ namespace Progetto_PCTO.Controllers
             MessageBox.Show("Prodotto rimosso dal carrello con successo !!!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void svuotaCarrello()
+        public void svuotaCarrello(string mostra)
         {
             pStrSQL = @"DELETE FROM Carrello";
             eseguiSQL("NQRY");
-            MessageBox.Show("Carrello svuotato con successo !!!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(mostra != "C")
+                MessageBox.Show("Carrello svuotato con successo !!!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void caricaListaCarrello()
