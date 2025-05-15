@@ -65,6 +65,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cmbEliminaProdotto = new System.Windows.Forms.ComboBox();
             this.btnConfermaAcquisto = new System.Windows.Forms.Button();
+            this.statisticheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendite)).BeginInit();
             this.grbVendite.SuspendLayout();
@@ -84,6 +85,7 @@
             this.clientiToolStripMenuItem,
             this.categorieToolStripMenuItem,
             this.prodottiToolStripMenuItem,
+            this.statisticheToolStripMenuItem,
             this.esciToolStripMenuItem,
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -435,6 +437,13 @@
             this.btnConfermaAcquisto.UseVisualStyleBackColor = false;
             this.btnConfermaAcquisto.Click += new System.EventHandler(this.btnConfermaAcquisto_Click);
             // 
+            // statisticheToolStripMenuItem
+            // 
+            this.statisticheToolStripMenuItem.Name = "statisticheToolStripMenuItem";
+            this.statisticheToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.statisticheToolStripMenuItem.Text = "Statistiche";
+            this.statisticheToolStripMenuItem.Click += new System.EventHandler(this.statisticheToolStripMenuItem_Click);
+            // 
             // FrmVendite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -514,6 +523,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbEliminaProdotto;
         private System.Windows.Forms.Button btnConfermaAcquisto;
+        private System.Windows.Forms.ToolStripMenuItem statisticheToolStripMenuItem;
     }
 }
 

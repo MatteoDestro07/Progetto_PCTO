@@ -96,6 +96,7 @@ namespace Progetto_PCTO.Controllers
             else if (tipo == "COD")
             {
                 sqlProdotti.cmd.Parameters.AddWithValue("@IdProdotti", prodotti.IdProdotto);
+                sqlProdotti.cmd.Parameters.AddWithValue("@Quantita", prodotti.Quantita);
             }
         }
 
@@ -132,6 +133,15 @@ namespace Progetto_PCTO.Controllers
                        WHERE Id = @IdProdotti";
             eseguiSQL("NQRY");
             MessageBox.Show("Prodotto modificato con successo !!!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void aggiornaQuantita()
+        {
+            creaParametriSQL("COD");
+            pStrSQL = @"UPDATE Prodotti SET 
+                        Quantita = @Quantita
+                       WHERE Id = @IdProdotti";
+            eseguiSQL("NQRY");
         }
 
         public void elimina()

@@ -137,6 +137,9 @@ namespace Progetto_PCTO.Views
                             testataVenditeController testataVendite = new testataVenditeController();
                             List<testataVenditeModel> listaTestataVendite = testataVendite.elencoTestataVendita();
 
+                            carrelloController carrello = new carrelloController();
+                            List<carrelloModel> listaCarrello = carrello.elencoCarrello();
+
                             testataVendite.testataVendita.NumeroFattura = listaTestataVendite.Count + 1;
                             testataVendite.testataVendita.ClienteID = getIdClienteFromNome(cmbCliente.Text);
                             testataVendite.testataVendita.Data = DateTime.Now;
@@ -144,9 +147,6 @@ namespace Progetto_PCTO.Views
                             testataVendite.aggiungi();
 
                             caricaDettaglio(testataVendite.testataVendita.NumeroFattura);
-
-                            carrelloController carrello = new carrelloController();
-                            List<carrelloModel> listaCarrello = carrello.elencoCarrello();
 
                             carrello.svuotaCarrello("C");
                             generaRicevuta(testataVendite.testataVendita.NumeroFattura);
@@ -165,6 +165,30 @@ namespace Progetto_PCTO.Views
             }
             else
                 MessageBox.Show("Selezionare un cliente", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void modificaQuantita()
+        {
+            prodottiController prodotti = new prodottiController();
+            List<prodottiModel> listaProdotti = prodotti.elencoProdotti();
+
+            // Recupera il carrello
+            carrelloController carrello = new carrelloController();
+            List<carrelloModel> listaCarrello = carrello.elencoCarrello();
+
+            // Aggiorna la quantità dei prodotti
+            foreach (var itemCarrello in listaCarrello)
+            {
+                var prodotto = listaProdotti.FirstOrDefault(p => p.IdProdotto == itemCarrello.IdProdotto);
+                if (prodotto != null)
+                {
+                    prodotto.Quantita -= itemCarrello.Quantita;
+                    // Salva la modifica nel database
+                    prodottiController prodottiUpdate = new prodottiController();
+                    prodottiUpdate.prodotti = prodotto;
+                    prodottiUpdate.aggiornaQuantita();
+                }
+            }
         }
 
         private void caricaDettaglio(int fattura)

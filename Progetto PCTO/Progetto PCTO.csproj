@@ -47,6 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,6 +105,12 @@
     <Compile Include="Views\FrmProdotti.Designer.cs">
       <DependentUpon>FrmProdotti.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmStatistiche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmStatistiche.Designer.cs">
+      <DependentUpon>FrmStatistiche.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmProdotti.resx">
       <DependentUpon>FrmProdotti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmStatistiche.resx">
+      <DependentUpon>FrmStatistiche.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

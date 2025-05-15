@@ -126,7 +126,33 @@ namespace Progetto_PCTO
                 case "Categorie":
                     visElencoCategorie();
                     break;
+
+                case "Dettaglio Vendite":
+                    visDettaglioVendite();
+                    break;
+
+                case "Testata Vendite":
+                    visTestataVendite();
+                    break;
             }
+        }
+
+        private void visTestataVendite()
+        {
+            testataVenditeController listaTestata = new testataVenditeController();
+
+            dgvVendite.DataSource = null;
+
+            caricaTestataVendite(listaTestata.elencoTestataVendita());
+        }
+
+        private void visDettaglioVendite()
+        {
+            dettaglioVenditeController listaDettaglio = new dettaglioVenditeController();
+
+            dgvVendite.DataSource = null;
+            
+            caricaDettaglioVendite(listaDettaglio.elencoDettaglioVendita());
         }
 
         private void visElencoClienti()
@@ -156,6 +182,46 @@ namespace Progetto_PCTO
             dgvVendite.DataSource = null;
 
             caricaCategorie(listaCategorie.elencoCategorie());
+        }
+
+        private void caricaTestataVendite(List<testataVenditeModel> testataVenditeModels)
+        {
+            clientiController clientiController = new clientiController();
+            List<clientiModel> listaClienti = clientiController.elencoClienti();
+
+            var testataConNomeCliente = testataVenditeModels.Select(t => new
+            {
+                t.NumeroFattura,
+                Cliente = listaClienti.FirstOrDefault(c => c.IdCliente == t.ClienteID) != null
+                    ? $"{listaClienti.FirstOrDefault(c => c.IdCliente == t.ClienteID).Nome} {listaClienti.FirstOrDefault(c => c.IdCliente == t.ClienteID).Cognome}"
+                    : "CLIENTE ELIMINATO DALL'ELENCO",
+                t.Data,
+                t.Indirizzo
+            }).ToList();
+
+            dgvVendite.DataSource = testataConNomeCliente;
+            dgvVendite.ReadOnly = true;
+            dgvVendite.ClearSelection();
+        }
+
+        private void caricaDettaglioVendite(List<dettaglioVenditeModel> lista)
+        {
+            prodottiController prodottiController = new prodottiController();
+            List<prodottiModel> listaProdotti = prodottiController.elencoProdotti();
+
+            var dettaglioConNomeProdotto = lista.Select(d => new
+            {
+                d.IdDettaglioVendita,
+                d.NumeroFattura,
+                d.IdProdotto,
+                NomeProdotto = listaProdotti.FirstOrDefault(p => p.IdProdotto == d.IdProdotto)?.DescProdotto,
+                d.QuantitaVenduta
+            }).ToList();
+
+            dgvVendite.DataSource = dettaglioConNomeProdotto;
+            dgvVendite.ReadOnly = true;
+            dgvVendite.Columns["IdProdotto"].Visible = false;
+            dgvVendite.ClearSelection();
         }
 
         private void caricaClienti(List<clientiModel> lista)
@@ -236,7 +302,7 @@ namespace Progetto_PCTO
             {
                 if (cmbProdottoVendita.SelectedIndex != -1)
                 {
-                    if (nudQuantitàVendita.Value != 0)
+                    if (nudQuantitàVendita.Value != 0 && prodottoDisponibile())
                     {
                         carrelloController carrello = new carrelloController();
                         carrello.carrello.IdProdotto = convertiProdottoInId(cmbProdottoVendita.Text);
@@ -254,13 +320,34 @@ namespace Progetto_PCTO
                         cmbCategoriaVendita.SelectedIndex = -1;
                     }
                     else
-                        MessageBox.Show("Inserire una quantità valida", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Il prodotto non è disponibile o devi inserire una quantità valida", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                     MessageBox.Show("Selezionare un prodotto", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
                 MessageBox.Show("Selezionare una categoria", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private bool prodottoDisponibile()
+        {
+            string nomeProdotto = cmbProdottoVendita.Text;
+            if (string.IsNullOrEmpty(nomeProdotto))
+                return false;
+
+            int quantitaRichiesta = (int)nudQuantitàVendita.Value;
+            if (quantitaRichiesta <= 0)
+                return false;
+
+            prodottiController prodottiController = new prodottiController();
+            List<prodottiModel> listaProdotti = prodottiController.elencoProdotti();
+
+            var prodotto = listaProdotti.FirstOrDefault(p => p.DescProdotto == nomeProdotto);
+
+            if (prodotto == null)
+                return false;
+
+            return prodotto.Quantita >= quantitaRichiesta;
         }
 
         private decimal getPrezzoById(string text)
@@ -413,6 +500,12 @@ namespace Progetto_PCTO
                 frmConfermaAcquisto.ShowDialog();
                 visCarrello(dgvCarrello);
             }
+        }
+
+        private void statisticheToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmStatistiche frmStatistiche = new FrmStatistiche();
+            frmStatistiche.ShowDialog();
         }
     }
 }

@@ -92,7 +92,21 @@ namespace Progetto_PCTO.Views
 
         private void caricaProdotti(List<prodottiModel> lista)
         {
-            dgv.DataSource = lista;
+            categorieController categorieController = new categorieController();
+            List<categorieModel> listaCategorie = categorieController.elencoCategorie();
+
+            var prodottiConNomeCategoria = lista.Select(p => new
+            {
+                p.IdProdotto,
+                Categoria = listaCategorie.FirstOrDefault(c => c.IdCategoria == p.IdCategoria)?.DescCategoria ?? "N/A",
+                p.DescProdotto,
+                p.Quantita,
+                p.Prezzo,
+                p.Immagine,
+                p.Validita
+            }).ToList();
+
+            dgv.DataSource = prodottiConNomeCategoria;
             dgv.ReadOnly = true;
             dgv.Columns["Validita"].Visible = false;
             dgv.ClearSelection();
